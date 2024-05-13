@@ -9,18 +9,19 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Vue Course Goals</h1>
+      <h1>Vue Dynamic Styling</h1>
     </header>
-    <section id="user-goal">
-      <h2>My Course Goal</h2>
-      <!-- <p v-html="courseGoalA">{{ outputGoal() }}</p> -->
-      <p>{{ courseGoalA }}</p>
-      <p>Such a nice Vue <a target="_blank" v-bind:href="vueLink">link</a></p>
+    <section id="styling">
+      <div :class="{demo: true, active: boxASelected}""
+           @click="boxSelected('A')">A</div>
+      <div class="demo" @click="boxSelected('B')"></div>
+      <div class="demo" @click="boxSelected('C')"></div>
+
     </section>
   </body>
 </html>
