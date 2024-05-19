@@ -1,16 +1,13 @@
 <template>
-  <the-header title="RememberMe"></the-header>
-  <stored-resources :resources="storedResources"></stored-resources>
-</template>å
+  <stored-resources :stored-resources="storedResources"></stored-resources>
+</template>
 
 <script>
-import StoredResources from './components/learning-resources/StoredResources.vue';
-import TheHeader from './components/layouts/TheHeader.vue';
+import StoredResources from "@/components/learning-resources/StoredResources.vue";
 
 export default {
   components: {
     StoredResources,
-    TheHeader,
   },
   data() {
     return {
@@ -18,19 +15,31 @@ export default {
         {
           id: 'official-guide',
           title: 'Official Guide',
-          description: 'The official Vue.js documentation.',
-          link: 'https://vuejs.org',
+          description: 'The official guide to Vue.js.',
+          link: 'https://vuejs.org/v2/guide/',
         },
         {
-          id: 'google',
-          title: 'Google',
-          description: 'Learn to google...',
-          link: 'https://google.org',
+          id: 'vue-cli',
+          title: 'Vue CLI',
+          description: 'Standard Tooling for Vue.js Development.',
+          link: 'https://cli.vuejs.org/',
         },
-      ],
-    };
-  },
-};
+        {
+          id: 'vuex',
+          title: 'Vuex',
+          description: 'Centralized State Management for Vue.js.',
+          link: 'https://vuex.vuejs.org/',
+        },
+        {
+          id: 'vue-router',
+          title: 'Vue Router',
+          description: 'The official router for Vue.js.',
+          link: 'https://router.vuejs.org/',
+        },
+      ]
+    }
+  }
+}
 </script>
 
 <style>
