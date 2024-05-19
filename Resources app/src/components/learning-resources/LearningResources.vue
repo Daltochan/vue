@@ -1,5 +1,6 @@
 <template>
-    <div>
+  <li>
+    <base-card>
       <header>
         <h3>{{ title }}</h3>
         <button>Delete</button>
@@ -8,10 +9,12 @@
       <nav>
         <a :href="link">View resource</a>
       </nav>
-    </div>
+    </base-card>
+  </li>
 </template>
 
 <script>
+
 export default {
   props: ['title', 'description', 'link'],
 }
