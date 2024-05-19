@@ -15,7 +15,7 @@ import LearningResources from "@/components/learning-resources/LearningResources
 
 export default {
   components: {LearningResources},
-  props: ['storedResources'],
+  inject: ['storedResources'],
 }
 </script>
 
